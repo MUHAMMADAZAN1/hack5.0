@@ -12,4 +12,7 @@ double getAirDistance(double originLatitude,double originLongitude,
     double delta = destinationLongitude - originLongitude;
     float const R = 6371;
    
-}
+} // spherical law
+    double distance = acos(sin(originLatitude) * sin(destinationLatitude) + cos(originLatitude) * cos(destinationLatitude) *cos(delta)) * R;
+    // return distance
+    return distance;
